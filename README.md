@@ -7,7 +7,7 @@ This repository implements an end-to-end Medallion Lakehouse architecture using 
 *Bronze Layer (01_raw_to_bronze.ipynb): 
   - Ingests raw JSON payloads from the public HAPI FHIR REST API.
   - Handles API pagination (up to 3 pages per resource).
-  - Sequentially ingests resources in mandated order: `Patient` ➔ `Encounter` ➔ `Observation` ➔ `Condition`.
+  - Sequentially ingests resources in mandated order: Patient -> Encounter -> Observation -> Condition.
   - Injects audit metadata columns (`extraction_timestamp` and `api_url_or_params`).
 
 *Silver Layer (02_bronze_to_silver.ipynb): 
