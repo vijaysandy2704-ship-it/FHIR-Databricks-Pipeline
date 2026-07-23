@@ -28,3 +28,17 @@ The pipeline is fully automated and orchestrated using 'Databricks Workflows (FH
 2. Bronze_to_Silver (02_bronze_to_silver - depends on Task 1)
 3. Silver_to_Gold(03_silver_to_gold - depends on Task 2)
 
+<img width="443" height="305" alt="image" src="https://github.com/user-attachments/assets/dd641a31-d6e7-4403-b5b1-b30d81502501" />
+<img width="440" height="395" alt="image" src="https://github.com/user-attachments/assets/cb1d91a2-8239-4798-b24a-52d7324c7de8" />
+<img width="437" height="349" alt="image" src="https://github.com/user-attachments/assets/44e9087d-c7ab-455b-9ffc-0e7f8c770fa5" />
+* Pipeline / Dataflow Configuration
+
+The pipeline configuration is stored in `workflow_config.json`. 
+Task Dependency Graph (DAG)
+1.Raw_to_Bronze: Runs 01_raw_to_bronze.ipynb
+2.Bronze_to_Silver: Runs 02_bronze_to_silver.ipynb (Depends on Raw_to_Bronze)
+3.Silver_to_Gold: Runs 03_silver_to_gold.ipynb (Depends on Bronze_to_Silver)
+
+
+
+
